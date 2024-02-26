@@ -150,8 +150,8 @@ class Robot:
         return host.find_element_by_xpath(".//a[@class='link-info cursor-pointer']")
 
     @staticmethod
-    def get_host_button(host, iteration):
-        return host.find_element_by_xpath(".//following-sibling::td[4]/button[contains(@class, 'btn')]")
+    def get_host_button(host, iteration): 
+        return host.find_element(By.XPATH, "//td[6]/button[contains(@class, 'btn-success')]")
 
     def get_hosts(self):
         host_tds = self.browser.find_elements_by_xpath("//td[@data-title=\"Host\"]")
